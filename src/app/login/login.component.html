@@ -1,0 +1,31 @@
+<!-- 
+<button type="submit" (click)="link()" class="btn btn-success">Link account</button>
+<button type="submit" (click)="logOut()" class="btn btn-success">Sign Out</button> -->
+
+
+
+<html>
+    <body class="bg">
+        <mat-toolbar>
+            <span>Tech Bin</span>
+            <span class="example-spacer"></span>
+        <mat-icon class="example-icon" aria-hidden="true" aria-label="Example user verified icon" (click)="trylogin()">verified_user</mat-icon>
+        </mat-toolbar>
+        <agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  <agm-marker [latitude]="lat1" [longitude]="lng1"></agm-marker>
+  <agm-marker [latitude]="lat2" [longitude]="lng2"></agm-marker>
+</agm-map>
+    <div class=submitbutton>
+        <!-- <button mat-raised-button color="warn" (click) = "link()" class="btn1">Link Account</button><br><br> -->
+        <button mat-raised-button color="primary" (click) = "logOut()" class="btn2">Sign Out</button>
+    </div>
+    <div>
+      <h3>  Thanks for using Smart Dustbin. Credits will be awarded to you. Hope you use it again.</h3>
+    </div>
+    <div class="image1">
+
+    </div>
+    </body>
+</html>
+

@@ -1,0 +1,16 @@
+<!--  
+<button type="submit" (click)="trylogin()" class="btn btn-success">Google Login</button>
+<button type="submit" (click)="login()" class="btn btn-success">anonymous Login</button> -->
+<html>
+    <body class="bg">
+        <mat-toolbar>
+            <span>Tech Bin</span>
+            <span class="example-spacer"></span>
+        <mat-icon class="example-icon" aria-hidden="true" aria-label="Example user verified icon" (click)="trylogin()">verified_user</mat-icon>
+        </mat-toolbar>
+    <div class=submitbutton>
+        <button mat-raised-button color="warn" (click) = "trylogin()" class="btn1">G+ Sign In With Google</button><br><br>
+        <button mat-raised-button color="primary" (click) = "login()" class="btn2">Anonymous</button>
+    </div>
+    </body>
+</html>

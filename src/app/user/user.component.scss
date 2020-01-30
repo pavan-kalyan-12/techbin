@@ -1,0 +1,26 @@
+.bg{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:whitesmoke;
+   // background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://www.dumpsters.com/images/blog/smart-bins-cover-photo_1525698416/smart-bins-cover-photo-1200x600.jpg');
+}
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+.btn1{
+    left: 46%;
+    margin-top: 20%;
+    padding : 0px 50px;
+    border: 2px solid rgb(160, 155, 155);
+}
+.btn2{
+    left: 46.25%;
+    padding : 0px 85px;
+    border: 2px solid rgb(160, 155, 155);
+}
