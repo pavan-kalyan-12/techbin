@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ChangeDetectorRef } from '@angular/core';
 import { AuthService} from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { environment } from '../../environments/environment';
+import * as mapboxgl from 'mapbox-gl';
 
 @Component({
   selector: 'app-login',
@@ -12,13 +14,10 @@ import { NgModule } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   title = 'dustbin';
+  map: mapboxgl.Map;
+  style = 'mapbox://styles/pa1-kalyan-s/ck61q0pz90csu1intywjwavpb';
   lat = 16.5665;
   lng = 81.5228;
-  lat1 = 16.5660;
-  lng1 = 81.5225;
-  lat2 = 16.5663;
-  lng2 = 81.5223;
-
 
   items: Array<any>;
   constructor(public as :AuthService ,private route:Router) { }
@@ -28,6 +27,15 @@ export class LoginComponent implements OnInit {
     //     console.log(e.payload.doc.data()); 
     //   })
     // });
+    (mapboxgl as typeof mapboxgl).accessToken = environment.mapbox.accessToken;
+      this.map = new mapboxgl.Map({
+        container: 'map',
+        style: this.style,
+        zoom: 13,
+        center: [this.lng, this.lat]
+    });
+    // Add map controls
+    this.map.addControl(new mapboxgl.NavigationControl());
   }
 
   // link(){

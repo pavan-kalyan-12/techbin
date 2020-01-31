@@ -1,6 +1,4 @@
-agm-map {
-  height: 700px;
-}
+
 .bg{
     position: relative;
     background-repeat: no-repeat;
@@ -33,4 +31,8 @@ agm-map {
 .image1{
   background-image: url("emoji.png");
   background-size: cover;
+}
+.match-parent {
+  width: 100%;
+  height: 100%;
 }

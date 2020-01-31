@@ -12,6 +12,10 @@ export const environment = {
     storageBucket: "smartdustbin-vit.appspot.com",
     messagingSenderId: "864419268441",
     appId: "1:864419268441:web:8f9609fb2f4347a00eee48"
+  },
+  mapbox: {
+    accessToken: 'pk.eyJ1IjoicGExLWthbHlhbi1zIiwiYSI6ImNrNXk3NGRycDA4NHgza3AzOXh5bzNvZ3cifQ.rmogNiV8aHqs3ishdVpvSw'
+    //accessToken: 'pa1-kalyan-s.ck61plp03037l2oqrn4k52p24-2abc9'
   }
 };
 
