@@ -16,13 +16,20 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule,MatCardModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserComponent } from './user/user.component';
-
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ManagerComponent } from './manager/manager.component';
+import { HeadComponent } from './head/head.component';
+import { WorkerComponent } from './worker/worker.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    UserComponent
+    UserComponent,
+    DashboardComponent,
+    ManagerComponent,
+    HeadComponent,
+    WorkerComponent
   ],
   imports: [
     BrowserModule,

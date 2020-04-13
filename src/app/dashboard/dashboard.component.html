@@ -1,29 +1,14 @@
-
-
-
 <html>
-    
     <body class="bg">
         <mat-toolbar>
             <span>Tech Bin</span>
             <span class="example-spacer"></span>
         <mat-icon class="example-icon" aria-hidden="true" aria-label="Example user verified icon" (click)="trylogin()">verified_user</mat-icon>
         </mat-toolbar>
-        <div  class="map" id="map" class="match-parent"></div>
-
-        
     <div class=submitbutton>
-        <button mat-raised-button color="primary" (click) = "logOut()" class="btn2">Sign Out</button>
+        <button mat-raised-button color="warn" (click)="login()" class="btn1"> Users </button><br><br>
+        <button mat-raised-button color="primary" (click)="manager()" class="btn2"> Manager </button><br><br>
+        <button mat-raised-button color="primary"  class="btn3"> Organization </button>
     </div>
-    <div >
-      <h3>  Thanks for using Smart Dustbin. Credits will be awarded to you. Hope you use it again.</h3>
-    </div>
-
-    
-
-   
-    
-    
     </body>
 </html>
-
