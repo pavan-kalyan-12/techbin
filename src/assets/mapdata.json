@@ -1,0 +1,38 @@
+[
+    {
+        "type": "Feature",
+        "properties": {
+            "description":
+                "<strong>BIN ID : 501</strong><p> BIN % : 68% </p>",
+            "icon": "bar"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [81.5225,16.5660]
+        }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "description":
+              "<strong>BIN ID : 502</strong><p> BIN % : 80% </p>",
+          "icon": "bar"
+      },
+      "geometry": {
+          "type": "Point",
+          "coordinates": [81.5225,16.5663]
+      }
+  },
+  {
+    "type": "Feature",
+    "properties": {
+        "description":
+            "<strong>BIN ID : 503</strong><p> BIN % : 10% </p>",
+        "icon": "bar"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [81.5225,16.5664]
+    }
+  }
+]

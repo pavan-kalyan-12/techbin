@@ -4,28 +4,35 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
+import { Observable } from "rxjs";
+
 
 //import{FirebaseListObservable,FirebaseObjectObservable} from 'angularfire2/database-deprecated';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  public df=firebase.database().ref().child("data");
 
+  sampleData: Observable<any[]>;
+  public colist:any[];
   userData: any;
+  // public colist: any;
   constructor(private db: AngularFireDatabase,
     private router: Router, private afAuth: AngularFireAuth, private af: AngularFirestore, public as: AuthService, public zone: NgZone) {
-    this.afAuth.authState.subscribe(user => {
-      if (user) {
-        this.userData = user.uid;
-        localStorage.setItem('user', JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem('user'));
-      } else {
-        localStorage.setItem('user', null);
-        JSON.parse(localStorage.getItem('user'));
-      }
-    });
+    // this.afAuth.authState.subscribe(user => {
+    //   if (user) {
+    //     this.userData = user.uid;
+    //     localStorage.setItem('user', JSON.stringify(this.userData));
+    //     JSON.parse(localStorage.getItem('user'));
+    //   } else {
+    //     localStorage.setItem('user', null);
+    //     JSON.parse(localStorage.getItem('user'));
+    //   }
+    // });
 
   }
+
 
   //public readonly ref = firebase.database().ref();
 
@@ -70,6 +77,20 @@ export class AuthService {
   getRandomSpan() {
     return Math.floor((Math.random() * 6) + 1);
   }
+
+
+  display_details() {
+    console.log("Display Fucntion Called");
+    console.log(this.db.list("data").valueChanges());
+    return this.db.list("data").valueChanges(); // returning an observable from db whenever changes happens in db.
+    // let dataArr = [];
+    // this.df.on("value", (snap) => {
+    //   console.log(snap.val());
+    //   dataArr.push(snap.val());
+    // });
+  }
+
+
 
   anonymousLogin() {
     this.zone.run(() => {

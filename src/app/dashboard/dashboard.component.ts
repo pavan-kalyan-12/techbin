@@ -20,4 +20,5 @@ export class DashboardComponent implements OnInit {
     this.route.navigate(['/manager']);
   }
   
+  
 }

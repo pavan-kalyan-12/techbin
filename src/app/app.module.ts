@@ -20,6 +20,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ManagerComponent } from './manager/manager.component';
 import { HeadComponent } from './head/head.component';
 import { WorkerComponent } from './worker/worker.component';
+import {HttpClientModule} from '@angular/common/http';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +37,7 @@ import { WorkerComponent } from './worker/worker.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, 
     AngularFireAuthModule,
